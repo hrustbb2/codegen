@@ -1,0 +1,13 @@
+{
+    "require": {
+        "nette/php-generator": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": ["src"]
+    }
+}
