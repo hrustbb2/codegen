@@ -4,7 +4,6 @@ namespace Src;
 
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpNamespace;
-use Nette\PhpGenerator\Printer;
 
 class Dir {
 
@@ -90,7 +89,7 @@ class Dir {
             $this->interfacesNs->addUse($this->backInterfaceNs . '\IFactory', 'I' . $this->upDirName . 'Factory');
         }
         if($this->backInterfaceNs){
-            $this->factory->addProperty(lcfirst($this->upDirName) . 'Factory', null)->setProtected()->setType('?I' . $this->upDirName . 'Factory');
+            $this->factory->addProperty(lcfirst($this->upDirName) . 'Factory')->setProtected()->setType('I' . $this->upDirName . 'Factory');
         }
         if($this->backInterfaceNs){
             $method = $this->factory->addMethod('set' . $this->upDirName . 'Factory');
